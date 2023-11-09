@@ -7,24 +7,25 @@
 int main(int argc, char *argv[]) {
 	
 	FILE* fp;
-	char str[100];
+	char c;
 	int i;
-	//1. open file
-	fp= fopen("sample.txt","w");
 	
-	//2. Write file
-	for (i=0; i<3; i++){
+	fp= fopen("sample.txt","r");
 	
-	//2-1. print *input a word"
-	printf("input a word");
-	//2-2. scan a string
-	scanf("%s",str);
-	//2-3. fprintf()
-	fprintf(fp, "%s\n", str); 
-	
+	if(fp==NULL){
+		
+		printf("failed to open\n");
+		return 0;
 	}
 	
-	//3. close file	
+	while( (c=fgetc(fp)) != EOF) //한글자 읽은게 마지막이 아니면 
+	{
+		putchar(c);
+		
+		//한글자 출력  
+	}
+ 
+	
 	fclose(fp);
 	
 	
