@@ -6,14 +6,10 @@
 
 int main(int argc, char *argv[]) {
 	
-	char src[]="The worst things to eat before you sleep.";
-	char dst[100];
+	char src[30]="Happy C programming";
 	
-	//str copy
-	strcpy(dst, src);  //배열에 이름만 넣어 카피할 수 있다.  
+	printf("문자열 \"%s\"의 길이: %i\n",src,strlen(src)); 
 	
-	printf("copied string: %s\n", dst);
-
 	
 	return 0;
 }
